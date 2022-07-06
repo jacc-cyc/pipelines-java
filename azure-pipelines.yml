@@ -23,7 +23,7 @@ steps:
 - script: |
    echo Hello123
    echo $(DATE)
-   date=$(TZ=HongKong date +"%Y-%m-%d_%H-%M")
+   date=$(TZ=UTC-8 date +"%Y-%m-%d_%H-%M")
    echo $date
 
 # date=$(date +"%Y-%m-%d_%H-%M")
