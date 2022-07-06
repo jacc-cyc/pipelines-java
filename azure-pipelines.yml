@@ -22,6 +22,10 @@ steps:
     goals: 'package'
 - script: |
    echo Hello123
-   date=$(date +"%Y-%m-%d_%H-%M")
-   echo $date
-   curl -H 'Content-Type: application/json' -X POST -d '{"@type": "MessageCard","@context": "http://schema.org/extensions","themeColor": "0076D7","summary": "Mobile App Devops","sections": [{"activityTitle": "Mobile App Devops","activitySubtitle": "Action triggered At '$date'","facts": [{"name": "App Platform","value": "IOS"}, {"name": "GitLab Commit User","value": "test"}, {"name": "GitLab Branch","value": "devops-build-dev"}, {"name": "Status","value": "Building Fail"}],"markdown": true}],"potentialAction": [{"@type": "OpenUri","name": "Github Action Status","targets": [{"os": "default","uri": "https://docs.microsoft.com/outlook/actionable-messages"}]}, {"@type": "OpenUri","name": "JIRA Filter","targets": [{"os": "default","uri": "https://docs.microsoft.com/outlook/actionable-messages"}]}]}' https://mtelnet.webhook.office.com/webhookb2/3df99eba-4636-47a9-a3be-6eca0e4307e9@0db69771-81cd-4fd0-9558-4d5d3b945c0f/IncomingWebhook/e91c69a4d83d46818ab120c30e10dd8f/b672f342-b6f8-429b-8326-9fc4e759ece2
+   echo $(DATE)
+
+# date=$(date +"%Y-%m-%d_%H-%M")
+
+# echo $date
+
+# curl -H 'Content-Type: application/json' -X POST -d '{"@type": "MessageCard","@context": "http://schema.org/extensions","themeColor": "0076D7","summary": "Mobile App Devops","sections": [{"activityTitle": "Mobile App Devops","activitySubtitle": "Action triggered At '$date'","facts": [{"name": "App Platform","value": "IOS"}, {"name": "GitLab Commit User","value": "test"}, {"name": "GitLab Branch","value": "devops-build-dev"}, {"name": "Status","value": "Building Fail"}],"markdown": true}],"potentialAction": [{"@type": "OpenUri","name": "Github Action Status","targets": [{"os": "default","uri": "https://docs.microsoft.com/outlook/actionable-messages"}]}, {"@type": "OpenUri","name": "JIRA Filter","targets": [{"os": "default","uri": "https://docs.microsoft.com/outlook/actionable-messages"}]}]}' https://mtelnet.webhook.office.com/webhookb2/3df99eba-4636-47a9-a3be-6eca0e4307e9@0db69771-81cd-4fd0-9558-4d5d3b945c0f/IncomingWebhook/e91c69a4d83d46818ab120c30e10dd8f/b672f342-b6f8-429b-8326-9fc4e759ece2
